@@ -1,28 +1,29 @@
 {
-  "name": "Template R operator",
-  "description": "Return the medium value of a cell",
-  "tags": ["template"],
+  "name": "NMF operator",
+  "description": "Non-negative Matrix Factorisation (NMF)",
+  "tags": ["clustering", "dimension reduction"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_R_operator"],
+  "urls": ["https://github.com/tercen/nmf_operator"],
   "properties": [
    {
-    "kind": "StringProperty",
-    "name": "string_example",
-    "defaultValue": "example",
-    "description": "description parameter 1"
+    "kind": "DoubleProperty",
+    "name": "n_clust",
+    "defaultValue": 5,
+    "description": "Number of archetypes to infer."
     },
     {
     "kind": "EnumeratedProperty",
-    "name": "list_example",
-    "defaultValue": "value1",
+    "name": "nmf_method",
+    "defaultValue": "offset",
     "values": [
-      "value1",
-      "StringProperty",
-      "DoubleProperty",
-      "BooleanProperty",
-      "EnumeratedProperty"
+      "offset",
+      "snmf/r",
+      "snmf/l",
+      "ls-nmf",
+      "brunet",
+      "lee",
     ],
-    "description": "description parameter 2"
+    "description": "NMF method"
   }
   ]
 }
