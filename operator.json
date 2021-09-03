@@ -21,7 +21,7 @@
       "snmf/l",
       "ls-nmf",
       "brunet",
-      "lee",
+      "lee"
     ],
     "description": "NMF method"
   }
